@@ -10,18 +10,21 @@ export default class NewScreen extends Component {
     this.state = {
       name: null,
       matricno: null,
-      major: null,
-      year: 0,
-      status: null
+      major: "BIT",
+      year: 1,
+      status: "Active"
     };
   }
 
   setName = (value) =>{
     this.setState({ name: value });
+    // Alert.alert("Name Entered" + this.state.name)
   }
 
   setMatricNo = (value) =>{
     this.setState({ matricno: value });
+    // Alert.alert("Name Entered" + this.state.matricno)
+
   }
 
   selectMajor = (value) => {
@@ -37,6 +40,7 @@ export default class NewScreen extends Component {
   }
 
   saveData = () =>{
+    console.log(this.state.name,this.state.matricno,this.state.major,this.state.year,this.state.status)
     if(this.state.name && this.state.matricno && this.state.major && this.state.year && this.state.status){
       if(isNaN(this.state.matricno)){
         Alert.alert('Status','Invalid Matric No!');
