@@ -10,9 +10,9 @@ export default class NewScreen extends Component {
     this.state = {
       name: null,
       matricno: null,
-      major: null,
+      major: "",
       year: 0,
-      status: null
+      status: ""
     };
   }
 
